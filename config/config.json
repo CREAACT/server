@@ -1,0 +1,26 @@
+{
+  "development": {
+   "username": "sql10722283",
+    "password": "fUN61l96sg",
+    "database": "sql10722283",
+    "host": "sql10.freemysqlhosting.net",
+    "dialect": "mysql",
+    "port":3306
+  },
+  "test": {
+    "username": "sql10722283",
+    "password": "fUN61l96sg",
+    "database": "sql10722283",
+    "host": "sql10.freemysqlhosting.net",
+    "dialect": "mysql",
+    "port":3306
+  },
+ "production": {
+  "username": "sql10722283",
+    "password": "fUN61l96sg",
+    "database": "sql10722283",
+    "host": "sql10.freemysqlhosting.net",
+    "dialect": "mysql",
+    "port":3306
+  }
+}
