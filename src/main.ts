@@ -1,4 +1,3 @@
-const cors = require('cors'); 
 
 import * as session from 'express-session';
 import * as passport from 'passport';
@@ -7,20 +6,7 @@ import { AppModule } from './app.module';
 import { DocumentBuilder } from '@nestjs/swagger';
 import { SwaggerModule } from '@nestjs/swagger/dist';
 
-const express = require('express');
-const app = express();
 
-app.use(cors({
-  origin: 'https://netcom.onrender.com',
-  methods: 'GET, POST, PUT, DELETE, OPTIONS',
-  allowedHeaders: 'Content-Type, Authorization',
-})); 
-
-// ... ваш API код ...
-
-app.listen(3000, () => {
-  console.log('Server listening on port 3000');
-});
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -37,6 +23,8 @@ async function bootstrap() {
   app.enableCors({
     credentials: true,
     origin: ['http://localhost:3001','https://netcom.onrender.com'],
+    methods: 'GET, POST, PUT, DELETE, OPTIONS',
+
   });
 
   const config = new DocumentBuilder()
