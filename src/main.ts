@@ -19,7 +19,7 @@ async function bootstrap() {
 
   app.enableCors({
     credentials: true,
-    origin: ['http://localhost:3001', 'https://netcom.onrender.com'],
+    origin: ['http://localhost:3001', 'https://netcam.vercel.app'],
   });
 
   const config = new DocumentBuilder()
