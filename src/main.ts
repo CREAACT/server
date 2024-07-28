@@ -19,7 +19,7 @@ async function bootstrap() {
 
   app.enableCors({
     credentials: true,
-    origin: ['http://localhost:3001', 'https://client-foax.vercel.app'],
+    origin: ['http://localhost:3001', 'https://netcom-one.vercel.app'],
   });
 
   const config = new DocumentBuilder()
