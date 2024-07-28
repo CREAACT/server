@@ -16,6 +16,17 @@ const mockedUser = {
   email: 'jhon@gmail.com',
   password: 'jhon123',
 };
+import { Controller, Get, SetMetadata } from '@nestjs/common';
+
+@Controller()
+export class AppController {
+  @Get()
+  @SetMetadata('cache-control', 'no-cache, no-store, must-revalidate')
+  @SetMetadata('x-content-type-options', 'nosniff')
+  getHello(): string {
+    return 'Hello World!';
+  }
+}
 
 describe('Auth Controller', () => {
   let app: INestApplication;
@@ -23,8 +34,9 @@ describe('Auth Controller', () => {
   beforeEach(async () => {
     const testModule: TestingModule = await Test.createTestingModule({
       imports: [
+              
         SequelizeModule.forRootAsync({
-          imports: [ConfigModule],
+          imports: [ConfigModule,AppController],
           useClass: SequelizeConfigService,
         }),
         ConfigModule.forRoot({
