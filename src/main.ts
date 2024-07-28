@@ -19,7 +19,7 @@ async function bootstrap() {
 
   app.enableCors({
     credentials: true,
-    origin: ['http://localhost:3001', 'https://netcam.vercel.app'],
+    origin: ['http://localhost:3001', 'https://client-ebon-one-37.vercel.app/'],
   });
 
   const config = new DocumentBuilder()
