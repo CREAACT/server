@@ -1,12 +1,9 @@
-
 import * as session from 'express-session';
 import * as passport from 'passport';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder } from '@nestjs/swagger';
 import { SwaggerModule } from '@nestjs/swagger/dist';
-
-
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -22,7 +19,7 @@ async function bootstrap() {
 
   app.enableCors({
     credentials: true,
-    origin: ['http://localhost:3001','https://netcom.onrender.com']
+    origin: ['http://localhost:3001', 'https://netcom.onrender.com'],
   });
 
   const config = new DocumentBuilder()
