@@ -22,9 +22,7 @@ async function bootstrap() {
 
   app.enableCors({
     credentials: true,
-    origin: ['http://localhost:3001','https://netcom.onrender.com'],
-    methods: 'GET, POST, PUT, DELETE, OPTIONS',
-
+    origin: ['http://localhost:3001','https://netcom.onrender.com']
   });
 
   const config = new DocumentBuilder()
